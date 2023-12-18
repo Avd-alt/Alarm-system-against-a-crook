@@ -1,8 +1,9 @@
 using UnityEngine;
 
+[RequireComponent(typeof(CharacterController))]
 public class ThiefMover : MonoBehaviour
 {
-    [SerializeField] float _speed;
+    [SerializeField] private float _speed;
 
     private CharacterController _characterController;
 

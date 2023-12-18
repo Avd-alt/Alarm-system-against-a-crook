@@ -23,13 +23,6 @@ public class Door : MonoBehaviour, IInteractable
     {
         _isOpen = !_isOpen;
 
-        if (_isOpen)
-        {
-            _animator.SetBool(IsOpen, true);
-        }
-        else
-        {
-            _animator.SetBool(IsOpen, false);
-        }
+        _animator.SetBool(IsOpen, _isOpen);
     }
 }

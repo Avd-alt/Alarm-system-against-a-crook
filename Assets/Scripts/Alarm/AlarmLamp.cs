@@ -24,9 +24,11 @@ public class AlarmLamp : MonoBehaviour
 
     private IEnumerator BlinkLight()
     {
+        WaitForSeconds blinkDelay = new WaitForSeconds(_blinkInterval);
+
         while (_isBlinking)
         {
-            yield return new WaitForSeconds(_blinkInterval);
+            yield return blinkDelay;
 
             _lamp.enabled = !_lamp.enabled;
         }
